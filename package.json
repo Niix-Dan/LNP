@@ -1,35 +1,59 @@
 {
-  "name": "lnp",
-  "version": "1.0.1-dev",
-  "description": "LNP is a compact, deterministic, length-prefixed data serialization format. It encodes structured data (objects, arrays, primitives, and binary) using a minimal grammar and unambiguous parsing rules.",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "node test/test.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Niix-Dan/LNP.git"
-  },
-  "keywords": [
-    "LNP",
-    "serialization",
-    "length-prefixed",
-    "data-format",
-    "parser",
-    "encoder"
-  ],
-  "author": "Niix-Dan",
-  "license": "MIT",
-  "files": [
-    "index.js",
-    "src/"
-  ],
-  "engines": {
-    "node": ">=18"
-  },
-  "bugs": {
-    "url": "https://github.com/Niix-Dan/LNP/issues"
-  },
-  "homepage": "https://github.com/Niix-Dan/LNP#readme"
+	"name": "lnp",
+	"license": "MIT",
+	"version": "{VERSION}",
+	"description": "A compact and deterministic length-prefixed serialization format with a minimal, unambiguous grammar.",
+	"author": "Niix-Dan",
+	"contributors": [
+		"KivixEletric"
+	],
+	"keywords": [
+		"lnp",
+		"blnp",
+		"serialization",
+		"deserialization",
+		"serializer",
+		"deserializer",
+		"deterministic",
+		"canonical",
+		"canonical-format",
+		"length-prefix",
+		"length-prefixed",
+		"compact-format",
+		"minimal-format",
+		"binary-format",
+		"text-format",
+		"streaming",
+		"stream-friendly",
+		"protocol",
+		"data-format",
+		"encoder",
+		"decoder"
+	],
+	"homepage": "https://github.com/Niix-Dan/LNP#readme",
+	"repository": {
+		"url": "git+https://github.com/Niix-Dan/LNP.git",
+		"type": "git"
+	},
+	"bugs": {
+		"url": "https://github.com/Niix-Dan/LNP/issues"
+	},
+	"scripts": {
+		"prepublishOnly": "npm run test",
+		"prepack": "npm run build",
+		"build": "tsup",
+		"test": "vitest run",
+		"dev": "tsup --watch"
+	},
+	"devDependencies": {
+		"@types/node": "^24.10.1",
+		"jsdom": "^27.2.0",
+		"tsup": "^8.5.1",
+		"tsx": "^4.20.6",
+		"typescript": "^5.9.3",
+		"vitest": "^4.0.9"
+	},
+	"dependencies": {
+		"tslib": "^2.8.1"
+	}
 }

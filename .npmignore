@@ -10,12 +10,24 @@
 .yarn/install-state.gz
 .pnp.*
 
-# TypeScript cache
+# TypeScript residues
+tsconfig.*.json
 *.tsbuildinfo
 
-# production
-**/build
-**/dist
+# Development
+**/extensions
+**/packages
+**/sources
+**/tests
+**/src
+*.*ignore
+
+# Lockfiles
+**/*-shrinkwrap.json
+**/*-lock.json
+**/*-lock.yaml
+**/*.lockb
+**/*.lock
 
 # Debugging
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
