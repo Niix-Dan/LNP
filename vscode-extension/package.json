@@ -1,0 +1,119 @@
+{
+	"name": "lnp-syntax",
+	"displayName": "LNP - Length-Notation Protocol",
+	"description": "Syntax highlighting for .lnp (Lenth-Notation Protocol)",
+	"version": "0.1.0",
+	"publisher": "Niix-Dan",
+	"icon": "icon.png",
+	"scripts": {
+		"vscode:prepublish": "npm run build",
+		"build": "tsc -p ./",
+		"package": "vsce package"
+	},
+	"engines": {
+		"vscode": "^1.70.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"activationEvents": [],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"languages": [
+			{
+				"id": "lnp",
+				"aliases": [
+					"LNP",
+					"lnp"
+				],
+				"extensions": [
+					".lnp"
+				],
+				"configuration": "./language-configuration.json",
+				"icon": {
+					"light": "./icon.png",
+					"dark": "./icon.png"
+				}
+			}
+		],
+		"grammars": [
+			{
+				"language": "lnp",
+				"scopeName": "source.lnp",
+				"path": "./syntaxes/lnp.tmLanguage.json"
+			}
+		],
+		"semanticTokenTypes": [
+			{
+				"id": "type-char",
+				"description": "O caractere de tipo LNP (o, s, n...)"
+			},
+			{
+				"id": "length",
+				"description": "O comprimento do payload"
+			},
+			{
+				"id": "colon",
+				"description": "O separador :"
+			},
+			{
+				"id": "property",
+				"description": "Uma chave de objeto LNP"
+			},
+			{
+				"id": "string",
+				"description": "Payload de string"
+			},
+			{
+				"id": "number",
+				"description": "Payload de número"
+			},
+			{
+				"id": "boolean",
+				"description": "Payload booleano"
+			},
+			{
+				"id": "null",
+				"description": "Payload nulo"
+			},
+			{
+				"id": "bytes",
+				"description": "Payload de bytes"
+			},
+			{
+				"id": "error",
+				"description": "Erro de sintaxe LNP"
+			}
+			],
+			
+			"semanticTokenScopes": [
+			{
+				"scopes": {
+				"type-char": ["keyword.control.lnp"],
+				"length": ["constant.numeric.lnp"],
+				"colon": ["punctuation.separator.lnp"],
+				"property": ["entity.name.property.lnp"],
+				"string": ["string.unquoted.lnp"],
+				"number": ["constant.numeric.lnp"],
+				"boolean": ["constant.language.boolean.lnp"],
+				"null": ["constant.language.null.lnp"],
+				"bytes": ["invalid.deprecated.lnp"],
+				"error": ["invalid.illegal.lnp"]
+				}
+			}
+		]
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.70.0",
+		"@vscode/vsce": "^3.7.0",
+		"typescript": "^5.9.3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Niix-Dan/LNP.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Niix-Dan/LNP/issues"
+	},
+	"homepage": "https://github.com/Niix-Dan/LNP#readme"
+}

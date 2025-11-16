@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "LNP",
+  "scopeName": "source.lnp",
+  "patterns": [
+    {
+      "comment": "Captura o header de qualquer valor LNP",
+      "match": "([oasnNbB])(\\d+)(:)",
+      "captures": {
+        "1": { "name": "keyword.control.lnp" },
+        "2": { "name": "constant.numeric.lnp" },
+        "3": { "name": "punctuation.separator.lnp" }
+      }
+    }
+  ]
+}
