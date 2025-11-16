@@ -1,3 +1,4 @@
+![WIP](https://img.shields.io/badge/status-WIP-yellow)
 # **LNP — Length-Notation Protocol**
 
 LNP is a compact, deterministic, length-prefixed data serialization format.
