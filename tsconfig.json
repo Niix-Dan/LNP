@@ -1,13 +1,14 @@
 {
 	"compilerOptions": {
-    "moduleResolution": "bundler",
-    "module": "ESNext",
+		"moduleResolution": "bundler",
+		"module": "ESNext",
 		"target": "es2017",
 		"lib": ["es2017"],
 
-		// Modules & Interoperability
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
+		"types": ["vitest/globals", "@types/node"],
+
+		"allowImportingTsExtensions": true,
+		"resolveJsonModule": true,
 		"esModuleInterop": true,
 		"isolatedModules": true,
 
@@ -22,8 +23,7 @@
 		"noUncheckedIndexedAccess": true,
 		"allowJs": true,
 
-		// Build & Cache
-    "skipLibCheck": true,
+		"skipLibCheck": true,
 		"noEmit": true
 	},
 	"exclude": ["node_modules", "extensions"],
