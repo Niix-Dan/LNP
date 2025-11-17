@@ -1,0 +1,31 @@
+{
+	"compilerOptions": {
+		"moduleResolution": "bundler",
+		"module": "ESNext",
+		"target": "es2017",
+		"lib": ["es2017"],
+
+		"types": ["vitest/globals", "@types/node"],
+
+		"allowImportingTsExtensions": true,
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+
+		// Code quality
+		"strict": true,
+		"useDefineForClassFields": true,
+		"importHelpers": true,
+		"forceConsistentCasingInFileNames": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+		"noUncheckedIndexedAccess": true,
+		"allowJs": true,
+
+		"skipLibCheck": true,
+		"noEmit": true
+	},
+	"exclude": ["node_modules", "extensions"],
+	"include": ["packages"]
+}
