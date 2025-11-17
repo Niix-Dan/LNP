@@ -151,8 +151,7 @@ array       = "a" length ":" { value } ;
 
 # **Roadmap**
 
-* Official Node.js encoder/decoder
-* Reference test suite
-* Implementations in Rust, Go, Python
-* Optional binary variant (BLNP)
-* Schema definition layer (optional)
+- [x] Official Node.js encoder/decoder
+- [ ] Reference test suite
+- [ ] Implementations in Rust, Go, Python
+- [ ] Optional binary variant (BLNP)
