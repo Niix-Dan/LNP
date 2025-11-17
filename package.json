@@ -1,7 +1,7 @@
 {
 	"name": "lnp",
 	"license": "MIT",
-	"version": "{VERSION}",
+	"version": "1.0.3-dev",
 	"description": "A compact and deterministic length-prefixed serialization format with a minimal, unambiguous grammar.",
 	"author": "Niix-Dan",
 	"contributors": [
